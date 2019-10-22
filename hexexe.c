@@ -34,13 +34,13 @@ int main(int argc, char* argv[])
 			return 0;
 		}
 
-		if ((!strcmp(argv[i],"-s")) && (!shellcode))
+		if (((!strcmp(argv[i],"-s")) || (!strcmp(argv[i],"--shellcode"))) && (!shellcode))
 		{
 			shellcode=TRUE;
 			continue;
 		}
 
-		if ((!strcmp(argv[i],"-u")) && (!uppercase))
+		if (((!strcmp(argv[i],"-u")) || (!strcmp(argv[i],"--uppercase"))) && (!uppercase))
 		{
 			uppercase=TRUE;
 			continue;
